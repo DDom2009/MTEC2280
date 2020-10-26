@@ -34,6 +34,7 @@ void draw() {
     
   } else if (State == "gameover") {
     State = "begin";
+    score = 0;
     
   
     
@@ -48,13 +49,19 @@ void draw() {
   if (r < 50) {
      score = score + 1;
       
-  if (score > 20){
+  if (score > 100){
      State = "gameover";
+     
+     
+   
+     
+    
      
     }
    }
   }
- }
+  }
+  
   
 
    
@@ -83,7 +90,7 @@ void Play(){
   fill(255, 0, 0);
   textSize(80);
   text ( Cheers[index], 500, 200);
-  fill(0);
+  fill(255);
   textSize(30);
   text (" click to 100!", 500, 500);
   
